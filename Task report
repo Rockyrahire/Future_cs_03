@@ -1,1 +1,76 @@
 
+Report on Secure File Sharing System
+1. Introduction
+
+The goal of this project is to create a file upload/download portal that ensures secure transmission and storage of files. We will achieve this by integrating AES (Advanced Encryption Standard) encryption to protect the data both at rest and in transit.
+
+2. Objectives
+
+Build a file upload/download portal: Users should be able to securely upload and download files from the portal.
+
+AES encryption implementation: Files will be encrypted using AES to ensure that the files remain confidential during both storage and transfer.
+
+Ensure secure file handling: We need to ensure that files are safely stored, transmitted, and can be accessed by authorized users only.
+
+Key management: Proper management of encryption keys will be crucial to ensuring the integrity of the encrypted files.
+
+3. Tools and Technologies
+
+To accomplish this task, the following tools and technologies will be used:
+
+Python Flask or Node.js (Express): These frameworks will handle the web development aspect of the portal, such as building the server and handling requests.
+
+PyCryptodome (Python) or Node.js Crypto Module: These libraries will be used to implement AES encryption and decryption for the files.
+
+Git & GitHub: These tools will be used for version control and to host the code repository.
+
+Postman/cURL: These tools will be used to test the file upload/download functionality and ensure encryption is correctly applied.
+
+Security considerations: Implement HTTPS for secure file transmission and manage keys using secure storage methods.
+
+4. Implementation
+Step 1: Setting Up the Web Framework
+
+Flask Setup (Python): Install the necessary packages (Flask, PyCryptodome, etc.) and create routes for file upload, download, and encryption.
+
+Express Setup (Node.js): Install express, crypto, and other dependencies needed for AES encryption and secure file handling.
+
+Step 2: File Upload and Download Routes
+
+File Upload: Create a route that accepts files and encrypts them before saving them to the server.
+
+File Download: Create a route that decrypts the requested file and sends it back to the user securely.
+
+Step 3: AES Encryption Implementation
+
+Encrypting Files: Use AES encryption to encrypt the files during upload and decrypt them during download.
+
+Implement AES with CBC or GCM mode to ensure data security and integrity.
+
+Encrypt both file contents and metadata.
+
+Step 4: Key Management
+
+Key Generation: Use secure methods for key generation (e.g., via a key exchange mechanism like RSA or securely storing keys in a database or a key management service).
+
+Key Storage: Keys should never be stored alongside encrypted files. Use a secure vault (e.g., HashiCorp Vault) or environment variables to manage keys.
+
+Step 5: Testing
+
+Test file upload, encryption, download, and decryption using tools like Postman or cURL to simulate client requests.
+
+Ensure proper security by testing file integrity and confidentiality throughout the upload/download process.
+
+5. Deliverables
+
+GitHub Repo: The project will be uploaded to GitHub for version control and easy access.
+
+Walkthrough Video: A video will demonstrate the process of using the file sharing portal, showcasing the functionality of file upload/download with AES encryption.
+
+Security Document: A document detailing the security measures taken, including AES encryption specifications, key management practices, and any vulnerabilities addressed.
+
+6. Conclusion
+
+This secure file-sharing system will ensure that files are encrypted both when stored and when transferred, providing strong protection against unauthorized access. By implementing AES encryption and proper key management, we can build a highly secure platform for file sharing.
+
+Would you like help with a specific part of this project, like coding or setting up the repository?
